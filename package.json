@@ -1,12 +1,26 @@
 {
   "name": "lyftr-ts",
-  "module": "index.ts",
+  "module": "app/main.ts",
   "type": "module",
   "private": true,
+  "scripts": {
+    "dev": "bun run app/main.ts",
+    "start": "bun run app/main.ts",
+    "test": "bun test"
+  },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "env-paths": "^3.0.0",
+    "minimist": "^1.2.8",
+    "node-gyp": "^12.1.0"
   },
   "peerDependencies": {
     "typescript": "^5"
+  },
+  "dependencies": {
+    "@types/express": "^5.0.6",
+    "express": "^5.2.1",
+    "merge-descriptors": "^2.0.0",
+    "zod": "^4.3.5"
   }
 }

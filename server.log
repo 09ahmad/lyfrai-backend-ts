@@ -1,0 +1,27 @@
+nohup: ignoring input
+Database initialized: file:./data/app.db
+{"ts":"2026-01-06T11:40:26.613Z","level":"INFO","event":"server_started","port":8000,"framework":"express"}
+{"ts":"2026-01-06T11:40:57.610Z","level":"INFO","request_id":"a1006a59-0dc0-4664-bbc8-a4f33c18c0d1","method":"POST","path":"/webhook","status":200,"latency_ms":11,"message_id":"m-smoke-1","dup":true,"result":"duplicate"}
+{"ts":"2026-01-06T11:40:57.614Z","level":"INFO","request_id":"afad9058-22e9-4aaa-bacb-286aa44e29c9","method":"POST","path":"/webhook","status":200,"latency_ms":1,"message_id":"m-smoke-1","dup":true,"result":"duplicate"}
+listMessages SQL: 
+      SELECT message_id, from_msisdn, to_msisdn, ts, text, created_at
+      FROM messages
+      
+      ORDER BY ts ASC, message_id ASC
+      LIMIT ? OFFSET ?
+     [] 10 0
+count SQL: SELECT COUNT(*) as count FROM messages  []
+{"ts":"2026-01-06T11:40:57.616Z","level":"INFO","request_id":"c1a9fa4f-6192-4933-a9e3-72441b5e8e6f","method":"GET","path":"/messages","status":200,"latency_ms":1}
+{"ts":"2026-01-06T11:40:57.618Z","level":"INFO","request_id":"db0bed77-405d-44d1-937a-e662ee09b4db","method":"GET","path":"/stats","status":200,"latency_ms":1}
+{"ts":"2026-01-06T11:41:12.686Z","level":"INFO","request_id":"dab49e94-2ef6-430f-982c-244141877b21","method":"POST","path":"/webhook","status":200,"latency_ms":1,"message_id":"m-smoke-1","dup":true,"result":"duplicate"}
+{"ts":"2026-01-06T11:41:12.694Z","level":"INFO","request_id":"cd44e1a9-b7d0-42dc-b4f5-2280b932b728","method":"POST","path":"/webhook","status":200,"latency_ms":6,"message_id":"m-smoke-1","dup":true,"result":"duplicate"}
+listMessages SQL: 
+      SELECT message_id, from_msisdn, to_msisdn, ts, text, created_at
+      FROM messages
+      
+      ORDER BY ts ASC, message_id ASC
+      LIMIT ? OFFSET ?
+     [] 10 0
+count SQL: SELECT COUNT(*) as count FROM messages  []
+{"ts":"2026-01-06T11:41:12.697Z","level":"INFO","request_id":"b62140f5-2718-425f-8a4c-678560537811","method":"GET","path":"/messages","status":200,"latency_ms":1}
+{"ts":"2026-01-06T11:41:12.699Z","level":"INFO","request_id":"74df8ff9-9d3f-4e60-82d6-fd545b0c9081","method":"GET","path":"/stats","status":200,"latency_ms":1}
